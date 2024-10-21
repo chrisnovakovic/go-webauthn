@@ -60,6 +60,11 @@ type Config struct {
 	// decode the URL Safe Base64 data.
 	EncodeUserIDAsString bool
 
+	// RelaxBEFlagValidation permits the value of the Backup Eligibility (BE) flag to change between credential
+	// registration and use. This may need to be enabled to validate credentials presented by clients that do not
+	// strictly adhere to WebAuthn Level 3.
+	RelaxBEFlagValidation bool
+
 	// Timeouts configures various timeouts.
 	Timeouts TimeoutsConfig
 
